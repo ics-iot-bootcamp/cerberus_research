@@ -16,8 +16,11 @@ a, d, dx = AnalyzeAPK(sys.argv[1])
 #This script statically decrypts encrypted DEX and extracts config file of Cerberus
 
 #Decrypt encrypted DEX
-outDexName="EXTRACTED_DEX_FROM_"+sys.argv[1]
+head, tail = os.path.split(sys.argv[1])
+outDexName="EXTRACTED_DEX_FROM_"+tail
 
+print()
+print("======== KEY AND PACKAGE INFO ========") 
 outDexContent, locationDEX=DEXDecrypt.decrypt(a, d, dx, sys.argv[1])
 with open(outDexName, "wb") as file:
 	file.write(outDexContent)
@@ -27,6 +30,8 @@ with open(outDexName, "wb") as file:
 cfg_src=source.getStringsClassSource(a, d, dx, outDexName)
 
 #Decrypt the strings, currently returns C2 URL
+print()
+print("======== DECRYPTED STRINGS ========") 
 decrypted_cfg_src=decryptConfig.all(cfg_src)
 
 #Collect and print other  IoC's
@@ -37,5 +42,7 @@ sha1apk = FileHash('sha1').hash_file(sys.argv[1])
 C2URL=decrypted_cfg_src
 fileSize=os.path.getsize(sys.argv[1]) * (10**-6)
 
-#print("AppName, MainActivity, MINSDK, EncryptedDEX, SHA1Sum, C&C ,Size(MB)")     
+print()
+print("======== IOC INFORMATION ========") 
+print("AppName, MainActivity, MINSDK, EncryptedDEX, SHA1Sum, C&C ,Size(MB)")    
 print(appName,",", mainActivity,",",minSDK,",",locationDEX,",",sha1apk,",",C2URL,",",fileSize)
