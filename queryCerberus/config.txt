@@ -1,0 +1,4 @@
+CAMPAIGN_NAME_HERE
+C2_DOMAIN_HERE
+C2_COMMKEY_HERE
+abcd-defg-hijk-lmno
