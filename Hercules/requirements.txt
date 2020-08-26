@@ -1,1 +1,2 @@
 -e git+https://github.com/androguard/androguard.git@99e48e7bfdd88c2912397b40ad7fc47ed7fae547#egg=androguard
+filehash
