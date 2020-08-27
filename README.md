@@ -6,6 +6,11 @@ Related research paper will be there soon.
 
 Initial analysis shows that the Android V2 in the source package is not the latest version. It lacks Android 10 improvements.
 
+![alt text](https://raw.githubusercontent.com/ics-iot-bootcamp/cerberus_research/master/endless.png)
+-Latest version contains Endless Foreground Service taken from;
+https://robertohuertas.com/2019/06/29/android_foreground_services/
+-Communication parameters of latest version are abbreviated. This one is not.
+
 
 This repository currently has two tools that can be used.
 
