@@ -2,6 +2,13 @@
 
 Related research paper will be there soon.
 
+This repository currently has two tools that can be used.
+
+**Hercules**: Cerberus banking trojan configuration decryptor.
+
+**queryCerberus**: Cerberus banking trojan C2 communication implementation.
+
+
 **cerberus_full_package** contains Cerberus source code that distributed to premium members of originated forum. Credits: DC8044
 
 Initial analysis shows that the Android V2 in the source package is not the latest version. It lacks Android 10 improvements.
@@ -11,13 +18,6 @@ Initial analysis shows that the Android V2 in the source package is not the late
 https://robertohuertas.com/2019/06/29/android_foreground_services/
 
 -Communication parameters of latest version are abbreviated. In the this one they aren't.
-
-
-This repository currently has two tools that can be used.
-
-**Hercules**: Cerberus banking trojan configuration decryptor.
-
-**queryCerberus**: Cerberus banking trojan C2 communication implementation.
 
 Stay Safe & Healthy.
 
