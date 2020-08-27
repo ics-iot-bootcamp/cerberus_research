@@ -8,6 +8,7 @@ This repository currently has two tools that can be used.
 
 **queryCerberus**: Cerberus banking trojan C2 communication implementation.
 
+---
 
 **cerberus_full_package** contains Cerberus source code that distributed to premium members of originated forum. Credits: DC8044
 
@@ -17,7 +18,7 @@ Initial analysis shows that the Android V2 in the source package is not the late
 -Latest version contains Endless Foreground Service taken from;
 https://robertohuertas.com/2019/06/29/android_foreground_services/
 
--Communication parameters of latest version are abbreviated. In the this one they aren't.
+-Communication parameters of latest version are abbreviated. In this one they aren't.
 
 Stay Safe & Healthy.
 
