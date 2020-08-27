@@ -1,0 +1,156 @@
+body {
+	background-color: #eeeeee;
+	color: #cccccc;
+}
+
+html {
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.header {
+	background: #ffffff;
+	position: relative;
+	z-index: 2;
+}
+
+.logongardient {
+	padding: 18px 0;
+	text-align: left;
+	box-shadow: 0px 0px 7px #888888;
+}
+
+.logo {
+	margin: 0 auto;
+	text-align: center;
+	color: #000000;
+	font-weight: bold;
+	font-size: 1.2rem;
+	padding-left: 25px;
+	overflow: hidden;
+}
+
+.main {
+	margin-top: 40px;
+}
+
+.autorizeBox {
+	background: #ffffff;
+	color: #cccccc;
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px #cccccc;
+	padding: 1.25rem 0;
+	max-width: 384px !important;
+	overflow: visible !important;
+	margin: 0 auto;
+}
+
+@media only screen and (max-width: 444px) {
+	.autorizeBox {
+		margin: 0 20px;
+	}
+	.bottombtn {
+		margin: 0 20px;
+	}
+}
+
+.autorizeBox form {
+	position: relative;
+	min-height: .0625rem;
+	padding: 5px 35px;
+}
+
+.autorizeBox ::placeholder {
+	color: #bebebe;
+	opacity: 1;
+}
+
+.autorizeBox label {
+	font-size: 1.125rem;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	margin-left: 5px;
+}
+
+.autorizeBox input {
+	font-size: 1.125rem;
+	background: 0 0;
+	border: none;
+	color: #000000;
+	border-bottom: 1px solid #ccc;
+	padding: 5px;
+	margin: 10px 0;
+	width: 96%;
+}
+
+.autorizeBox input.dt {
+	width: 17%;
+}
+
+.bottombtn {
+	padding: 1.25rem 0;
+	max-width: 384px !important;
+	overflow: visible !important;
+	margin: 0 auto;
+}
+
+.bottommagrin {
+	width: 100%;
+	bottom: 10px;
+	position: absolute;
+}
+
+.bottombtn .center {
+	position: relative;
+	min-height: .0625rem;
+	padding: 5px 35px;
+}
+
+.bottombtn a {
+	margin-bottom: 15px;
+	color: #818181;
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+
+.bottombtn .atag {
+	text-decoration: none;
+	color: #cccccc;
+}
+
+.bottombtn .atag span {
+	color: #70b4ea;
+}
+
+.bottombtn button {
+	margin: 20px 0;
+	background-color: #ff4c67;
+	border: none;
+	width: 100%;
+	height: 2.5rem;
+	overflow-x: auto;
+	border-radius: 30px;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+.bottombtn button:disabled,
+.bottombtn button[disabled] {
+	background-color: #bbbbbb;
+}
+
+.bottombtn button span {
+	line-height: 1.125rem;
+	white-space: normal;
+	margin: .0625rem .75rem;
+	font-size: 1rem;
+	font-weight: 600;
+	color: #ffffff;
+	letter-spacing: 0;
+	text-decoration: none;
+}

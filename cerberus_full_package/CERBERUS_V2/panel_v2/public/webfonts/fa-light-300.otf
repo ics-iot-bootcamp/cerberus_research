@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="404 - Not Found">
+      <meta name="author" content="Font Awesome Team">
+
+      <base href="https://fontawesome.com">
+
+      <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-icon-57x57.png">
+      <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-icon-60x60.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-icon-76x76.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="/images/favicons/apple-icon-114x114.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-icon-120x120.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-icon-144x144.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-icon-152x152.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-icon-180x180.png">
+
+      <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="96x96" href="/images/favicons/favicon-96x96.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
+
+      <meta name="msapplication-TileColor" content="#ffffff">
+      <meta name="msapplication-TileImage" content="/images/favicons/ms-icon-144x144.png">
+      <meta name="theme-color" content="#ffffff">
+
+      <title>404 - Not Found</title>
+
+      <link rel="stylesheet" href="/css/app.css">
+
+      <script src="https://use.fortawesome.com/349cfdf6.js"></script>
+    </head>
+  
+  <body class="no-js min-vh-100 bg-gray1 gray7 ma0 sans-serif">
+    <div class="wrapper-view">
+      <div class="view view-404 flex flex-column min-vh-100 items-center justify-center pa6" data-view="view-404">
+
+        <div class="mw7 center">
+          <h2 class="db mt0 mb6 tc f6">
+            <a href="/" class="link gray5 hover-blue4">
+              <i class="fa5 fa5-logo fa5-lg"></i>
+              <span class="fw6 ml1">Font Awesome</span>
+            </a>
+          </h2>
+
+          <div class="bg-white br2 br--top pa6 tc ba bw1 b--gray1 bb-0">
+            <div class="cf">
+              <div class="fl-ns w-30-ns w-100 mb4 mb0-ns">
+                <div class="f7 f9-l">
+                  <i class="fa5 fa5-stark fa5-5x gray3"></i>
+                </div>
+              </div>
+
+              <div class="fr-ns w-60-ns w-100">
+                <h1 class="danger7 f7-l f5 fw7 sans-serif mt0 mb4 lh1">
+                  <span>404</span>
+                  <hr class="ba bw1 b--gray1 pv0 mt2 mb1">
+                  <span class="f4 ttu tracked1">Page Not Found</span>
+                </h1>
+
+                <blockquote class="gray7 f6 f7-l lh-copy fw6 pa0 ma0">
+                  <p class="mv0">
+                    &ldquo;You know what keeps going through my head? Where's my sandwich?&rdquo;
+                  </p>
+                  <cite class="sr-only">
+                    — <a href="http://www.imdb.com/title/tt1300854/quotes?item=qt1925225" target="_blank">Tony Stark</a>
+                  </cite>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-danger7 br2 br--bottom ph5 pv4 bt bw2 b--black-10 tc tl-ns">
+            <p class="mv0 lh-copy danger2 f4">Hmm. Looks like we can't find that page. Maybe check the address again, try <a class="link near-white underline-hover" href="/sessions/signin">signing in</a> first, looking for <a class="link near-white underline-hover" href="/icons">another icon</a>, or <a class="link near-white underline-hover" href="mailto:hello@fontawesome.com?subject=Help! I can't find something.">let us know about the trouble</a>.</p>
+          </div>
+
+          
+<nav class="flex flex-column flex-row-l items-center justify-between-l mt5 nl4-l nr4-l gray5">
+  <div class="flex-grow-1 ph4 tc tl-l mb4 mb0-l">
+    <a class="db dib-l v-mid mr4-l mb3 mb0-l link color-inherit hover-blue4 underline-hover" href="/help">Help</a>
+    <a class="db dib-l v-mid link color-inherit hover-blue4 underline-hover" href="mailto:hello@fontawesome.com">Contact Us</a>
+  </div>
+
+  <div class="flex-grow-1 ph4 tc mb4 mb0-l">
+    <a class="db dib-l v-mid mr4-l mb3 mb0-l link color-inherit hover-blue4 underline-hover" href="/license">License</a>
+    <a class="db dib-l v-mid mr4-l mb3 mb0-l link color-inherit hover-blue4 underline-hover" href="/tos">Terms of Service</a>
+    <a class="db dib-l v-mid link color-inherit hover-blue4 underline-hover" href="/privacy">Privacy Policy</a>
+  </div>
+
+  <div class="flex-grow-1 ph4 tc tr-l">
+    <a class="db dib-l v-mid mr4-l mb3 mb0-l link color-inherit hover-blue4 f4" href="https://twitter.com/fontawesome" data-balloon="@fontawesome on Twitter" data-balloon-pos="up">
+      <i class="fa5 fa5-lg fa5-twitter"></i>
+    </a>
+    <a class="db dib-l v-mid mb0-l link color-inherit hover-blue4 f4" href="https://github.com/FortAwesome/Font-Awesome" data-balloon="Font Awesome on GitHub" data-balloon-pos=up>
+      <i class="fa5 fa5-lg fa5-github"></i>
+    </a>
+  </div>
+</nav>
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

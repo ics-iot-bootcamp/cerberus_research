@@ -1,0 +1,89 @@
+Сначала устанавлиаем ТОР
+
+# apt install tor -y
+
+далее после установки узнаём путь до файла сервиса, выполнив команду
+
+# service tor status
+
+или скорее всего он находится по пути /lib/systemd/system/tor.service
+
+и редактируем файл сервиса, заменяя содержимое на:
+
+[Unit]
+Description=Anonymizing overlay network for TCP (multi-instance-master)
+
+[Service]
+User=root
+Group=root
+RemainAfterExit=yes
+ExecStart=/usr/bin/tor --RunAsDaemon 0
+ExecReload=/bin/killall tor
+KillSignal=SIGINT
+TimeoutStartSec=300
+TimeoutStopSec=60
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+
+И так, теперь перезапускаем сервис тора
+
+# service tor restart
+
+Узнаём путь до второго конфига тора (которые не по пути /etc/tor/torrc ),
+он чаще всего лежит по пути /usr/share/tor/tor-service-defaults-torrc, но если нет, для этого выполняем команду 
+
+# cat /var/log/syslog 
+
+И этим мы получаем системные логи, и там будут логи тора, и будет видно путь до конфига. Удаляем лишний конфиг.
+
+# rm -rf /usr/share/tor/tor-service-defaults-torrc
+
+В /etc/tor/torrc прописываем следующее: 
+
+HiddenServiceDir /var/lib/tor/service1
+HiddenServicePort 80 127.0.0.1:8080
+
+где /var/lib/tor/service1 путь до папки с вашим конфигом ТОР сайта (не веб сайт, а конфиг!)
+
+перезапускаем тор сервис 
+
+# service tor restart
+
+теперь у нас в папке /var/www/mytorsite создались 2 файла, один с именем хоста, а другой с приватным ключем. Скопируем куда нибудь имя хоста, оно нам пригодится далее.
+
+далее настраиваем виртуальные хосты. Создаём папку под сайт 
+
+# cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/example.onion.conf
+
+мы скопировали конфиг, а теперь редактируем его
+
+Listen 127.0.0.1:8080
+<VirtualHost 127.0.0.1:8080>
+   ServerName 3rxszbalifql32ow.onion
+   DocumentRoot /var/www/tor/
+   ErrorLog ${APACHE_LOG_DIR}/tor_error.log
+   CustomLog ${APACHE_LOG_DIR}/tor_access.log combined
+</VirtualHost>
+
+где /var/www/tor/ путь до вашей папки с сайтом.
+
+потом включаем сайт через 
+
+# a2ensite example.onion.conf
+
+Если возникли ошибки, то делаем
+
+# dpkg-reconfigure locales
+
+и выбираем все языки, и ждём пока они переконфигурируются. Потом выполняем снова 
+
+# a2ensite example.onion.conf
+
+и после делаем
+
+# service apache2 restart
+# service tor restart
+
+Всё, теперь всё работет.

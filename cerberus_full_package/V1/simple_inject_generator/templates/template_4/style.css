@@ -1,0 +1,129 @@
+body {
+    background-color: #ffffff;
+}
+html {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.header {
+    position: relative;
+    z-index: 2;
+}
+.logongardient {
+    background-color: #000000;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 1px solid rgb(124, 124, 124);
+}
+.logo {
+    font-size: 1.5rem;
+    margin: 0 auto;
+    text-align: center;
+}
+.main {
+    margin-top: 10px;
+}
+.autorizeBox {
+    background: rgba(255, 255, 255, .96);
+    padding: 1.25rem 0;
+    overflow: visible !important;
+    margin: 0 auto;
+    max-width: 370px;
+}
+.autorizeBox form {
+    position: relative;
+    min-height: .0625rem;
+    padding: 5px 20px;
+}
+.autorizeBox ::placeholder {
+    color: #008bc1;
+    opacity: 1;
+    font-weight: lighter;
+    font-size: 1.08rem;
+}
+.autorizeBox label {
+    font-size: 1.125rem;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-left: 5px;
+}
+.autorizeBox button {
+    margin: 20px 0;
+    background-color: #008bc1;
+    border: none;
+    width: 100%;
+    height: 2.5rem;
+    overflow-x: auto;
+    border-radius: .3125rem;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.autorizeBox button:disabled,
+.autorizeBox button[disabled] {
+    background-color: #e6e7e9;
+}
+.autorizeBox button:disabled span,
+.autorizeBox button[disabled] span {
+    color: #a1a8af;
+}
+.autorizeBox button span {
+    line-height: 1.125rem;
+    white-space: normal;
+    margin: .0625rem .75rem;
+    font-size: 1rem;
+    font-weight: bolder;
+    color: #fff;
+    letter-spacing: 0;
+    text-decoration: none;
+}
+.footer {
+    background: #fff;
+    font-size: 16px;
+    padding: 1em 0;
+    margin-top: 150px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #757575;
+    font-size: 1rem;
+    text-align: center;
+}
+.footer p.link {
+    color: rgb(0, 106, 206);
+    line-height: 15px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    font-weight: bold;
+}
+.footer table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+.footer table tr td {
+    width: 33.3333%;
+}
+#ccnumlbl {
+    color: red;
+    font-size: 0.8rem;
+}
+.warntext {
+    color: red;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bolder;
+}
+.infotext {
+    color: #636363;
+    text-align: center;
+}
+.avaimg {
+    text-align: center;
+    margin: 15px 0px -35px 0px;
+}
+

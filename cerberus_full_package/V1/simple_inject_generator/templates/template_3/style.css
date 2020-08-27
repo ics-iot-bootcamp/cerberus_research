@@ -1,0 +1,137 @@
+body {
+    background-color: #ffffff;
+}
+html {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#template {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+	overflow: hidden;
+}
+#template .logo {
+    text-align: center;
+}
+#template .content {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    max-width: 440px;
+    width: calc(100% - 88px);
+    padding: 44px 44px 84px 44px;
+    margin-bottom: 28px;
+    background-color: #fff;
+    min-width: 200px;
+    overflow: hidden;
+}
+#template input::placeholder {
+    transition: none;
+    color: rgba(0,0,0,.42);
+}
+#template input {
+    margin-bottom:1.25em;
+    height: 44px;
+    width: 100%;
+    padding: 0 10px;
+    border: none;
+    border-bottom: 1px solid #9da3a6;
+    background: #fff;
+        background-clip: border-box;
+    text-overflow: ellipsis;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    color: #000;
+    font-size: 1em;
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    direction: ltr;
+}
+#template .createtext {
+    margin-bottom: 16px;
+    font-size: .8125rem;
+    color: #262626;
+    text-align: left;
+}
+#template .btnNext {
+    border-radius: 4px;
+    width: 100%;
+    height: 46px;
+    margin-top: 16px;
+    box-shadow: none;
+    display: block;
+    line-height: 46px;
+    background-color: #029688;
+    color: #fff;
+    box-sizing: border-box;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    outline: 0;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+    display: inline-block;
+    white-space: nowrap;
+    text-decoration: none;
+    vertical-align: baseline;
+    text-align: center;
+    min-width: 64px;
+    line-height: 36px;
+    padding: 0 16px;
+    border-radius: 4px;
+    overflow: visible;
+    transform: translate3d(0,0,0);
+}
+#template .btnNext:hover {
+    background-color: #005ea6;
+    outline: 0;
+}
+#template .btnNext:disabled {
+    background-color: #dddddd;
+    color: #909090;
+}
+#template .middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+#template .mailText {
+    margin-top: 35px;
+    width: 100%;
+    text-align: center;
+}
+.centerhr hr {
+    border: none;
+    border-top: 1px solid #eee;
+}
+.centerhr .toptextspan {
+    background-color: #fff;
+    color: #999;
+    font-size: 12.6px;
+    padding: 5px;
+    position: relative;
+    top: -18px;
+}
+.centerhr {
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.ainfo {
+    text-decoration: none;
+    margin-top: 16px;
+    text-align: center;
+    width: 100%;
+    display: block;
+    color: #029688;
+    font-size: 11.2px;
+}

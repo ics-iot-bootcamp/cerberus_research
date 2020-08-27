@@ -1,0 +1,143 @@
+.paper-toggle{
+    clear: both;
+    margin: 20px 0;
+  }
+  
+  .paper-toggle input:empty
+  {
+    display:none;
+  }
+  
+  .paper-toggle 
+  {
+      position: relative;
+      float: left;
+      line-height: 1.6em;
+      width: 150px;
+      cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  .paper-toggle input:empty ~ label:before, 
+  .paper-toggle input:empty ~ label:after
+  {
+    position: absolute;
+      display: block;
+    content: ' ';
+    -webkit-transition: all 200ms ease-in;
+    transition: all 200ms ease-in;
+  }
+  
+  .paper-toggle input:empty ~ label:before
+  {
+      top: 3px;
+      left: 4px;
+      width: 34px;
+      height: 14px;
+      border-radius: 6px;
+      background-color: #5a5a5a;
+      opacity: 0.60;
+  }
+  
+  input.switch:empty ~ label:after
+  {
+      top: 0px;
+      left: 0px;
+      width: 1.4em;
+      height: 8px;
+      bottom: 0.1em;
+      margin-left: 0.1em;
+      background-color: #ffffff;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 0;
+      border-color: #5a5a5a;
+      -webkit-box-shadow: -1px 2px 6px -1px rgba(0,0,0,0.75);
+      -moz-box-shadow: -1px 2px 6px -1px rgba(0,0,0,0.75);
+      box-shadow: -1px 2px 6px -1px rgba(0,0,0,0.75);
+  }
+  
+  .paper-toggle input:checked ~ label:before
+  {
+      background-color: #00aeef;
+  }
+  
+  .paper-toggle input:checked ~ label:after
+  {
+      left: 16px;
+    background-color: #00aeef;
+    border-color: #00aeef;
+  }
+  .material {
+    position: relative;
+    padding: 0;
+    margin: 5px;
+    border: none;
+    overflow: visible;
+  }
+  .material input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px 10px 8px;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    border-bottom: 1px solid #DDD;
+    font-size: 120%;
+    outline: none;
+    cursor: text;
+  }
+  .material input::-webkit-input-placeholder {
+    transition: color 300ms ease;
+  }
+  .material input:not(:focus)::-webkit-input-placeholder {
+    color: transparent;
+  }
+  .material hr {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 2px;
+    border: none;
+    background: #008bc1;
+    font-size: 1px;
+    will-change: transform, visibility;
+    transition: all 200ms ease-out;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    visibility: hidden;
+    z-index: 10;
+  }
+  .material input:focus ~ hr {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    visibility: visible;
+  }
+  .material label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 120%;
+    color: #008bc1;
+    -webkit-transform-origin: 0 -150%;
+            transform-origin: 0 -150%;
+    transition: -webkit-transform 300ms ease;
+    transition: transform 300ms ease;
+    transition: transform 300ms ease, -webkit-transform 300ms ease;
+    pointer-events: none;
+  }
+  .material input:focus ~ label,
+  .material input:valid ~ label {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+  }
