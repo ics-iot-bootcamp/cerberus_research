@@ -1,4 +1,5 @@
 //https://stackoverflow.com/questions/12289717/rc4-encryption-java
+// This is the RC4 implementation used by the Cerberus banking trojan while communicating with the C2.
 public final class _RC4Implementation {
    private int[] _t;
    private int _i = 0;
