@@ -1,0 +1,24 @@
+DirectoryIndex index.php
+ErrorDocument 404 /index.php
+ErrorDocument 403 /index.php
+Options -Indexes
+
+<Files "obfuscatejs.sh">  
+  Require all denied
+</Files>
+<Files "medoo.php">  
+    RewriteEngine On
+    RewriteRule "/medoo.php" "/index.php"
+</Files>
+<Files "config.json">  
+    RewriteEngine On
+    RewriteRule "/config.json" "/getconfig.php"
+</Files>
+<Files "index.html">  
+    RewriteEngine On
+    RewriteRule "/index.html" "/index.php"
+</Files>
+<Files "config.php">  
+    RewriteEngine On
+    RewriteRule "/config.php" "/index.php"
+</Files>
