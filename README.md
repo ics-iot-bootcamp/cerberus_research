@@ -9,7 +9,8 @@ Initial analysis shows that the Android V2 in the source package is not the late
 ![alt text](https://raw.githubusercontent.com/ics-iot-bootcamp/cerberus_research/master/endless.png)
 -Latest version contains Endless Foreground Service taken from;
 https://robertohuertas.com/2019/06/29/android_foreground_services/
--Communication parameters of latest version are abbreviated. This one is not.
+
+-Communication parameters of latest version are abbreviated. In the this one they aren't.
 
 
 This repository currently has two tools that can be used.
