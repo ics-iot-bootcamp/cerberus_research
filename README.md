@@ -3,7 +3,9 @@
 Related research paper will be there soon.
 
 **cerberus_full_package** contains Cerberus source code that distributed to premium members of originated forum. Credits: DC8044
-Initial analysis shows that the Andorid V2 in the source package is not the latest version. It lacks Android 10 improvements.
+
+Initial analysis shows that the Android V2 in the source package is not the latest version. It lacks Android 10 improvements.
+
 
 This repository currently has two tools that can be used.
 
