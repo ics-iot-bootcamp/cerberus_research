@@ -17,7 +17,7 @@ Regards, Cyberwise Research Task Force (Cyberwise - RTF).
 
 Hercules automatically finds decryption key for actual DEX of the given Cerberus sample, decrypts it, then decrypts configuration parameters in the actual payload. All statically, in seconds.
 
- ### Usage:
+ #### Usage:
 
 ```sh
 python3.8 get_ioc.py <path_to_apk>
@@ -76,14 +76,14 @@ cevir kazan , gyuhdfhwlqz.lbkzzysjbhwueqyszj.gkfnt.byuqixelqjd , 20 , assets/sLk
 
 queryCerberus mimics Cerberus banking trojan to extract information from C2.
 
-**How to Compile:**
+ ### How to Compile:
 
 Simply run following command on a JDK installed system:
 ```sh
 javac -cp ".:okhttp-3.6.0.jar:okio-1.11.0.jar" queryCerberus.java
 ```
 
-**How to run:**
+### How to run:
 
 queryCerberus supports three commands.
 
@@ -95,7 +95,7 @@ queryCerberus supports three commands.
 
 Device registration can be made by using register command, it will generate an appropriate ID and sent it to C2. If response is 'ok' this ID can be used for further communication. C2 may not generate response if there is not any registered ID. Recommended to run register before other commands.
 
-### Usage:
+#### Usage:
 
 ```sh
 java -cp ".:okhttp-3.6.0.jar:okio-1.11.0.jar" queryCerberus register
@@ -105,7 +105,7 @@ java -cp ".:okhttp-3.6.0.jar:okio-1.11.0.jar" queryCerberus register
 
 Settings can be queried with info command. Response may contain backup C2 domains.
 
-### Usage:
+#### Usage:
 
 ```sh
 java -cp ".:okhttp-3.6.0.jar:okio-1.11.0.jar" queryCerberus info
@@ -122,7 +122,7 @@ Sample Output (URL scheme will not be changed in actual output):
 
 This command requires package name parameter to query. It queries given package name for existence of injection template, if exists downloads and saves injection to  package_name.html  file.
 
-### Usage:
+#### Usage:
 
 ```sh
 java -cp ".:okhttp-3.6.0.jar:okio-1.11.0.jar" queryCerberus get_inject <package_name>
