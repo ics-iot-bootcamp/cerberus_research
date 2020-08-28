@@ -4,7 +4,7 @@
 
 This repository currently has two tools that can be used.
 
-**Hercules**: Cerberus banking trojan configuration decryptor.
+**Hercules**: Hercules automatically finds decryption key for actual DEX of the given Cerberus sample, decrypts it, then decrypts configuration parameters in the actual payload. All statically, in seconds.
 
 **queryCerberus**: Cerberus banking trojan C2 communication implementation.
 
