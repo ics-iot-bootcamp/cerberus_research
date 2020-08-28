@@ -50,7 +50,7 @@ cevir kazan , gyuhdfhwlqz.lbkzzysjbhwueqyszj.gkfnt.byuqixelqjd , 20 , assets/sLk
 
 >  *DEXDecrypt* in the hercules library also able to automatically
 >                             decrypt DEX files of similar malware (like Anubis, ginp) packed
->                             like same method. For usage please refer to code comments on
+>                             with same method. For usage please refer to code comments on
 >                             get_ioc.py .
 
 *It requires **Androguard 3.5.0**. If you are getting an error like below, please upgrade;*
