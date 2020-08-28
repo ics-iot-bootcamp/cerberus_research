@@ -1,6 +1,6 @@
 # Cerberus Banking Trojan Research
 
-Related research paper will be there soon.
+Related research paper : https://www.biznet.com.tr/cerberus-banking-trojan-analysis/
 
 This repository currently has two tools that can be used.
 
