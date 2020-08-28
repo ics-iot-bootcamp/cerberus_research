@@ -11,6 +11,7 @@ python3.8 get_ioc.py <path_to_apk>
 *Decrypted DEX file will be saved to current working directory.*
 
 Sample Output (truncated) (URL scheme is not changed in real output):
+
 (In the latest version of the Cerberus; 2: Campaign Name, 3: C2 URL, 6: C2 Communication Key. This information can be used with queryCerberus)
 ```
 $ python3.8 get_ioc.py cevirdikcekazan.apk
