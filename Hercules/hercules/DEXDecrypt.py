@@ -1,6 +1,7 @@
 from androguard.misc import AnalyzeAPK
 
 import sys
+import re
 from zipfile import ZipFile
 
 from hercules import Utils
@@ -108,8 +109,12 @@ def decrypt(at, dt, dxt, apkFileName):
 	
 		for line in init.splitlines():
 			if(Utils.between(target_method, ">", " ") in line):
-				target_method=Utils.between(line,Utils.dejavaish(target.decode()), "(")[1:]
-	
+				rgx = re.findall(r'(?<='+Utils.dejavaish(target.decode()).replace(".","\.")+'\.)(.*?)(?=\()', line)
+				if(len(rgx) > 1):
+					target_method=rgx[1]
+				else:
+					target_method=rgx[0]
+
 		lst = []
 		for meth in target_obj.get_methods():
 			if(meth.get_method().get_name()==target_method):
@@ -117,6 +122,7 @@ def decrypt(at, dt, dxt, apkFileName):
 					btw=Utils.between(line, " = {", "};") #
 					if(btw!=""):
 						lst.append(list(map(int, btw.split(","))))
+		
 	
 		return bruteforce(lst), encrypted_name
 	else:
