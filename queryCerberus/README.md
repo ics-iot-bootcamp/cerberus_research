@@ -1,6 +1,6 @@
 ## queryCerberus
 
-queryCerberus mimics Cerberus banking trojan to extract information from C2.
+queryCerberus mimics Cerberus (only latest version, planned to support early v2) banking trojan to extract information from C2.
 
  ### How to Compile:
 
