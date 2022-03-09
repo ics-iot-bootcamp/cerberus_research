@@ -1,6 +1,6 @@
 # Cerberus Banking Trojan Research
 
-**Related research paper :** https://www.biznet.com.tr/wp-content/uploads/2020/08/Cerberus.pdf
+**Related research paper :** https://github.com/ics-iot-bootcamp/cerberus_research/blob/master/cerberus_research_paper.pdf
 
 This repository currently has two tools that can be used.
 
